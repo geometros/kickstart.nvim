@@ -192,11 +192,17 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 --Custom keybinds
-vim.api.nvim_set_keymap('n', '<Leader>b', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>bb', ':bnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>bp', ':bprevious<CR>', { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap('n', '<Leader>bd', ':bdelete<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>ls', ':buffers<CR>', { noremap = true, silent = true })
+
+--Other customizations
+vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
+vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
+vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
+vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
