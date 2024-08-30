@@ -198,6 +198,9 @@ vim.api.nvim_set_keymap('n', '<Leader>bp', ':bprevious<CR>', { noremap = true, s
 vim.api.nvim_set_keymap('n', '<Leader>bd', ':bdelete<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>ls', ':buffers<CR>', { noremap = true, silent = true })
 
+vim.api.nvim_set_keymap('n', '<Leader>d', ':Ex<CR>', { noremap = true, silent = true })
+
+vim.keymap.set('i', '<Leader>ee', '<Plug>(emmet-expand-abbr)', { silent = true, desc = 'Emmet expand abbreviation' })
 --Other customizations
 vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
 vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
